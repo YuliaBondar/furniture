@@ -1,0 +1,102 @@
+
+body {
+    background-color: #C5B0FA;
+    
+}
+/* ********************* */
+
+.header-content-with-three-component {
+    position: relative;
+}
+
+.block-content {
+    display: flex;
+   text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+:root {
+    --block-width: calc(100vw / 3);
+}
+
+.content-block {
+    width: var(--block-width);
+    height: 800px;
+    background-color: #C5B0FA;
+    margin: 10px;
+    transition: width 0.5s;
+}
+.content-block .content-block-one{
+    background-color: #C5B0FA;
+}
+.content-block.content-block-two{
+    background-color:  #FA8FEF;
+}
+.content-block.content-block-three{
+    background-color: #AECFFF;
+}
+
+/* ****************for block*********************** */
+.images-block{
+    display: block;
+     margin: 0 auto;
+     width: 290px; 
+     height: 425px;
+}
+
+/* **************for navigation********* */
+.navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    list-style-type: none;
+    margin-top: 55px;
+    margin-left: 60px;
+    margin-right: 120px;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+    margin-right: 30px; 
+    color: white;
+    font-size: 18px;
+}
+
+nav li:nth-of-type(2) {
+    margin-right: 300px; 
+}
+
+nav li:nth-of-type(3),
+nav li:nth-of-type(4) {
+    margin-right: 30px; 
+}
+
+nav li:nth-of-type(4) {
+    margin-right: 300px; 
+}
+
+nav li:nth-of-type(5) {
+    margin-right: 200px; 
+}
+
+nav li:nth-of-type(6),
+nav li:nth-of-type(7) {
+    margin-right: 36px; 
+}
+
+nav li i {
+    margin-right: 5px;
+}
+
+.link-home {
+    font-size: 45px;
+    font-family: 'Le Murmure';
+    white-space: nowrap;
+}
