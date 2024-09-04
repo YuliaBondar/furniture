@@ -11,23 +11,9 @@
     <div class="content-item">
 
         <div class="header-content-with-three-component">
-            <div class="block-content">
-                <div class="content-block content-block-one">
-                    <div class="images-from-content">
-                        <img class="images-block" src="../images/mainphoto/first.png" alt="'floor mirror">
-                    </div>
-                </div>
-                <div class="content-block content-block-two">
-                    <div class="images-from-content">
-                        <img class="images-block" src="../images/mainphoto/second.png" alt="'floor mirror">
-                    </div>
-                </div>
-                <div class="content-block content-block-three">
-                    <div class="images-from-content">
-                        <img class="images-block" src="../images/mainphoto/third.png" alt="'floor mirror">
-                    </div>
-                </div>
-            </div>
+            <div class="block-content"> <script src="D:\furniture\furniture\js\blockAnimation.js"></script> </div>
+            
+            
             <div class="navigation">
                 <nav>
                     <li class="link-home">Elfen lied</li>
@@ -36,13 +22,29 @@
                     <li>Контакты</li>
                     <li><i class="fas fa-search"></i>Поиск</li>
                     <li><i class="fas fa-heart"></i></li>
-                    <li><i class="fas fa-user"></i></li>
+                    <li><i class="fas fa-user" id="modalForm"></i></li>
                     <li> <i class="fas fa-shopping-cart"></i></i></li>
                 </nav>
             </div>
         </div>
-
-    </div>
+        <script src="../js//modalFormAutoriz.js"></script>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Вход / Регистрация</h2>
+              <input type="email" placeholder="Email">
+              <input type="password" placeholder="Пароль">
+              <button>Войти</button>
+            </div>
+          </div>
+        
+        <!-- <div class="category">
+            <h1>категории</h1>
+            <div class="content-category" id="content-category"></div>
+            <div class="content-details" id="content-details"></div>
+        </div><script src="../js/category.js"></script>
+       
+    </div> -->
 
 </body>
 </html>

@@ -1,7 +1,24 @@
+/* *************font-family**************** */
+@font-face {
+    font-family: 'Floreste';
+    src: url('../fonts/floreste-font/floreste/FloresteWavy-BWPqd.otf') format('opentype');
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Euclid Circular A';
+    src: url('../fonts/floreste-font/floreste/Euclid\ Circular\ A\ Italic.ttf') format('opentype');
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Le Murmure';
+    src: url('../fonts/floreste-font/floreste/Le_Murmure-Regular_web.ttf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
 
+/* **************************************** */
 body {
-    background-color: #C5B0FA;
-    
+    background-color: #b5a1e7;
 }
 /* ********************* */
 
@@ -11,9 +28,10 @@ body {
 
 .block-content {
     display: flex;
-   text-align: center;
+    text-align: center;
     align-items: center;
     justify-content: space-between;
+    margin: 10px;
 }
 
 :root {
@@ -22,29 +40,67 @@ body {
 
 .content-block {
     width: var(--block-width);
-    height: 800px;
-    background-color: #C5B0FA;
+    height: 860px;
     margin: 10px;
     transition: width 0.5s;
+    border-radius: 40px;
 }
-.content-block .content-block-one{
+.content-block.content-block-1{
     background-color: #C5B0FA;
 }
-.content-block.content-block-two{
+.content-block.content-block-2{
     background-color:  #FA8FEF;
 }
-.content-block.content-block-three{
+.content-block.content-block-3{
     background-color: #AECFFF;
 }
 
+.content-items{
+    color: white;
+    width: 250px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto; 
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.slide-number{
+    padding-top: 100px;
+    color:white;
+    font-family: 'Floreste';
+    font-size: 15px;
+}
+
+.content-items button{
+    color:black;
+}
 /* ****************for block*********************** */
 .images-block{
     display: block;
      margin: 0 auto;
-     width: 290px; 
-     height: 425px;
+     width: 350px; 
+     height: 400px;
+     transform: rotate(5deg) ;
+     padding-top: 150px;
 }
 
+
+.images-from-content {
+    position: relative;
+  }
+  
+  
+  .overlay-text {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-size: 70px;
+    text-wrap: nowrap;
+    font-family: 'Floreste';
+  }
+  
 /* **************for navigation********* */
 .navigation {
     position: absolute;
@@ -56,39 +112,39 @@ body {
 nav {
     display: flex;
     list-style-type: none;
-    margin-top: 55px;
+    margin-top: 35px;
     margin-left: 60px;
-    margin-right: 120px;
+    margin-right: 100px;
 }
 
 nav li {
     display: flex;
     align-items: center;
-    margin-right: 30px; 
+    margin-right: 60px; 
     color: white;
     font-size: 18px;
 }
 
 nav li:nth-of-type(2) {
-    margin-right: 300px; 
+    margin-right: 290px; 
 }
 
 nav li:nth-of-type(3),
 nav li:nth-of-type(4) {
-    margin-right: 30px; 
+    margin-right: 20px; 
 }
 
 nav li:nth-of-type(4) {
-    margin-right: 300px; 
+    margin-right: 290px; 
 }
 
 nav li:nth-of-type(5) {
-    margin-right: 200px; 
+    margin-right: 190px; 
 }
 
 nav li:nth-of-type(6),
 nav li:nth-of-type(7) {
-    margin-right: 36px; 
+    margin-right: 26px; 
 }
 
 nav li i {
@@ -100,3 +156,147 @@ nav li i {
     font-family: 'Le Murmure';
     white-space: nowrap;
 }
+/* ***************category**************** */
+.category{
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    color:white;
+    font-family: 'Euclid Circular A';
+}
+
+
+
+
+/* **********content-category***************** */
+
+.content-category {
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly with space around */
+    align-items: center;
+    margin-left: 65px;
+  
+}
+.first img {
+    max-width: 100%; 
+    max-height: 100%; 
+}
+.first {
+    width: 200px; 
+    height: 300px; 
+    background-color: #CBB6FF;
+    border-radius: 70% 70% 70% 70%;  
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+.quantity {
+    position: absolute;
+    top: 50px; 
+    right: 1px; 
+    background-color: #b5a1e7; 
+    padding: 6px 5px; 
+    border-radius: 15px; 
+    font-weight: bold;
+    border-radius: 50%;
+    position: absolute; 
+    transform: rotate(-15deg);
+}
+  .first p{
+    font-family: 'Floreste';
+    width: 70px;
+    height: 20px;
+    font-size: 18px;
+  }
+  .for-col {
+   align-items: center;
+    text-align: center;
+    width: 50px;
+    height: 30px;
+  }
+
+/* ********arrow************ */
+
+.arrow {
+    position: absolute;
+    bottom: -15px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:3px solid  #D9FF5A;
+    background-color:#b5a1e7 ;
+}
+
+.arrow i {
+    font-size: 24px;
+    color:  #D9FF5A;
+}
+.arrow button{
+    border:none;
+    background-color: inherit;
+}
+.arrow:active, .button:active {
+    background-color: #D9FF5A;
+}
+.arrow i .fa-arrow-down:active{
+    background-color:#b5a1e7 ;
+}
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0,0,0,0.7); 
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+/* ************adaptiv for desktop********** */
+/* @media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    body {
+        background-color: lightgreen;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        background-color: lightgray;
+    }
+} */
+
