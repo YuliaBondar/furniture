@@ -250,35 +250,127 @@ nav li i {
 
 .modal {
     display: none;
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%; 
-    background-color: rgba(0,0,0,0.7); 
-  }
-  
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
+    position: fixed;
+    z-index: 1;
+    right: 60px;
+    top: 100px;
+    width: 400px;
+    height: 400px;
+    background: rgba(51, 32, 101, 0.2); /* Dimmed background color */
+    border-radius: 30px;
     padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-  }
-  
-  .close {
-    color: #aaa;
+    color: white;
+    backdrop-filter: blur(3px); /* Apply blur effect to the background */
+}
+
+
+.close {
+    color: #ffffff;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover {
-    color: black;
+    margin-bottom: 100px;
+}
+
+.close:hover {
     text-decoration: none;
     cursor: pointer;
-  }
+}
+
+.modal-content input {
+    margin-top: 30px;
+    border: none;
+    background-color: inherit;
+    color:white;
+    font-family: 'Euclid Circular A';
+}
+.modal-content input:focus {
+    border: none;
+    background-color: inherit;
+    outline: none; 
+    border: none;
+}
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: white;
+}
+  hr {
+    border: 0;
+    height: 1px;
+    margin: 5px 0;
+}
+
+hr.yellow {
+    background-color: #D9FF5A;
+}
+
+.modal-content button {
+    margin-top: 40px;
+    border: 2px solid yellow; 
+    background-color: inherit;
+    color: white;
+    transform: rotate(-15deg); 
+    border-radius: 50%;
+    width: 100px; /* Adjust the width as needed */
+    height: 50px;
+    font-weight:'Euclid Circular A' ;
+}
+.modal-content button:active {
+    background-color: yellow;
+    color:white;
+}
+.bottom-link {
+    position: fixed;
+    bottom: 10px; /* Adjust as needed for desired distance from the bottom */
+    left: 50px;
+    transform: translateX(-50%);
+}
+
+
+
+
+/* ****************text line with text********* */
+.block-text-content {
+    display: flex;
+    height: 40px;
+    color:white;
+   
+}
+
+.creating-an-art-text {
+    flex: 1;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.creating-an-art-text {
+    flex: 1;
+    font-family: 'Floreste';
+    /* font-size: 20px; */
+    color: white;
+    word-spacing: 25px; /* Растягивает текст на всю ширину блока */
+}
+
+.first-text {
+    background: #AECEFF;
+    transform-origin: top right;
+    margin-top: 150px;
+    transform: rotate(-5deg);
+    position: relative;
+    z-index: 1;
+}
+
+.second-text {
+    background: #CBB6FF;
+    transform-origin: top left;
+    transform: rotate(5deg);
+    
+}
+.creating-an-art-text span{
+    font-size: 20px;
+}
 
 
 /* ************adaptiv for desktop********** */
