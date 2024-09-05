@@ -27,24 +27,55 @@
                 </nav>
             </div>
         </div>
+
         <script src="../js//modalFormAutoriz.js"></script>
+       
         <div class="modal" id="modal">
             <div class="modal-content">
-              <span class="close">&times;</span>
-              <h2>Вход / Регистрация</h2>
-              <input type="email" placeholder="Email">
-              <input type="password" placeholder="Пароль">
-              <button>Войти</button>
+                <span class="close">&times;</span>
+                <h2 style="font-family:Euclid Circular A ;">Вход</h2>
+                <input type="email" placeholder="Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+                <hr class="yellow">
+                <input type="password" placeholder="Пароль">
+                <hr class="yellow">
+                <button > Войти</button>
+                <div>
+                    <p style='margin-top: 90px;' onclick="openRegistrationModal()">Нет аккаунта? Регистрация <span style="color:yellow; font-weight: bold;">→</span></p>
+                </div>
             </div>
           </div>
-        
-        <!-- <div class="category">
+          <div class="modal" id="registrationModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeRegistrationModal()">&times;</span>
+                <h2 style="font-family:Euclid Circular A;">Регистрация</h2>
+                
+                <input type="email" placeholder="Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+                <hr class="yellow">
+                <input type="password" placeholder="Пароль">
+                <hr class="yellow">
+                <input type="password" placeholder="Повторите пароль">
+                <hr class="yellow">
+                <button >Регистрация</button>
+                <div class="bottom-link">
+                    <p onclick="openLoginModal()"><span style="color:yellow">← </span> Вход</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
             <h1>категории</h1>
-            <div class="content-category" id="content-category"></div>
-            <div class="content-details" id="content-details"></div>
-        </div><script src="../js/category.js"></script>
+            <div id="content-category" class="content-category"></div>
+            <div id="content-details" class="content-details"></div>
+            <script src="../js/category.js"></script>
+    
+        </div>
+        <div class="block-tet-content">
+            <div class="creating-an-art-text first-text"><span style=" font-family: 'Floreste'; font-size:20px ;color:white;">creating a great art +  creating a great art +  creating a great art  + creating a great art  + creating a great art  + creating a great </span></div>   
+            <div class="creating-an-art-text second-text"><span style=" font-family: 'Floreste';font-size:20px;color:white;">creating a great art + creating a great art + creating a great art +creating a great art + creating a great art  + creating a great</span></div> 
+        </div>
+           
        
-    </div> -->
+    </div>
 
 </body>
 </html>
