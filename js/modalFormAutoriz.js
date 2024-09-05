@@ -18,3 +18,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+   
+
+function openRegistrationModal() {
+    document.getElementById("modal").style.display = "none";
+    document.getElementById("registrationModal").style.display = "block";
+}
+
+function closeRegistrationModal() {
+    document.getElementById("registrationModal").style.display = "none";
+    document.getElementById("modal").style.display = "block";
+}
+
+function openLoginModal() {
+    document.getElementById("registrationModal").style.display = "none";
+    document.getElementById("modal").style.display = "block";
+}
