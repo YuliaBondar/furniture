@@ -66,6 +66,10 @@ contentBlocks.forEach((currentBlock, currentIndex) => {
                 if (overlayText) {
                     overlayText.style.display = 'block';
                 }
+                const buyButton = block.querySelector('.buy-button');
+                if (buyButton) {
+                    buyButton.remove();
+                }
             });
             expandedBlockIndex = null;
         } else {
@@ -82,9 +86,14 @@ contentBlocks.forEach((currentBlock, currentIndex) => {
                     const overlayText = block.querySelector('.overlay-text');
                     if (overlayText) {
                         overlayText.style.display = 'block';
-                        overlayText.style.fontSize = '90px'; // Увеличение текста в 2 раза
+                        overlayText.style.fontSize = '70px'; 
                     }
-                    
+                    if (!block.querySelector('.buy-button')) {
+                        const buyButton = document.createElement('button');
+                        buyButton.classList.add('buy-button');
+                        buyButton.textContent = 'Купить';
+                        block.querySelector('.content-items').appendChild(buyButton);
+                    }
                 } else {
                     block.style.width = '';
                     block.querySelector('.content-items').style.display = 'none';
@@ -95,6 +104,10 @@ contentBlocks.forEach((currentBlock, currentIndex) => {
                     }
                     if (!block.querySelector('.slide-number')) {
                         block.querySelector('.images-from-content').innerHTML += `<p class="slide-number">СЛАЙД <br/><br/><span style='font-size:40px'>0${index + 1}<span></p>`;
+                    }
+                    const buyButton = block.querySelector('.buy-button');
+                    if (buyButton) {
+                        buyButton.remove();
                     }
                 }
             });

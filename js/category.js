@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="quantity">
                 <div class="for-col" style="background-color: pink; border-radius: 40%;">${quantity}</div>
             </div>
+            
             <div class="arrow">
                 <button onclick="toggleDetails(${id})"><i class="fa fa-arrow-down"></i></button>
             </div>
@@ -93,14 +94,22 @@ items.forEach(({ photo, name, text, price, color }) => {
     detailDiv.classList.add('detail');
     detailDiv.innerHTML = `
         <div style="background-color:${color}; width:10px; height:10px; border-radius:50%; border: 2px solid white;"></div>
-        <img style="width:100px;" src="${photo}">
-        <p>${name}</p>
-        <p>${text}</p>
-        <hr class="yellow">
-        <p >${price} <sup>₽</sup></p>
+        <img style="width:200px;" src="${photo}">
+        <p style='font-size:20px'>${name}</p>
+        
+        <p style='font-size:15px'>${text}</p>
+        <div style='display:flex; justify-content: space-between; align-items: center; font-family:'Floreste''>
+    <p>${price} <sup>₽</sup></p>
+      <div style='display: flex; align-items: center;'>
+        <i class="fas fa-shopping-basket" style='margin-right: 5px; color:yellow'></i>
+        <p>Купить</p>
+    </div>
+   
+</div>
+       
     `;
+   
     contentDetails.appendChild(detailDiv);
 });
-
     }
 });

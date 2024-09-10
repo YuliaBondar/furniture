@@ -13,5 +13,4 @@ modal.addEventListener('click', (e) => {
 
 function closeModal() {
     document.getElementById("modalContact").style.display = "none";
-    // document.getElementById("modalContact").style.display = "block";
 }

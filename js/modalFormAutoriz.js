@@ -29,6 +29,10 @@ function closeRegistrationModal() {
     document.getElementById("registrationModal").style.display = "none";
     document.getElementById("modal").style.display = "block";
 }
+function closeRegistration() {
+    document.getElementById("modal").style.display = "none";
+    document.getElementById("modal").style.display = "block";
+}
 
 function openLoginModal() {
     document.getElementById("registrationModal").style.display = "none";

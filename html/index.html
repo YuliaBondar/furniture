@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>furniture</title>
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/adaptiv.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+   
 </head>
 <body>
     <div class="content-item">
@@ -18,16 +20,26 @@
                 <nav>
                     <li class="link-home">Elfen lied</li>
                     <li>Каталог</li>
-                    <li>Новости</li>
+                    <li>Блог</li>
                     <li id="modalFormContact">Контакты </li>
-                    <li><i class="fas fa-search"></i>Поиск</li>
+                    <li id="openModal"><i class="fas fa-search"></i>Поиск</li>
                     <li><i class="fas fa-heart"></i></li>
                     <li><i class="fas fa-user" id="modalForm"></i></li>
-                    <li> <i class="fas fa-shopping-cart"></i></i></li>
+                    <li> <i class="fas fa-shopping-cart" id="shopping-cart"></i></i></li>
                 </nav>
             </div>
         </div>
 
+        <script src="../js//modalShoppingCart.js"></script>
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <span class="closes">&times;</span>
+                <h2>Товары в избранном</h2>
+                
+            </div>
+        </div>
+        
+        
         <script src="../js//modalFormAutoriz.js"></script>
        <!-- модальное окно входа -->
         <div class="modal" id="modal">
@@ -62,12 +74,52 @@
                 </div>
             </div>
         </div>
+    <!-- модальное окно для поиска -->
+    <script src="../js/find_modelWin.js"></script>
+    <div class="modalContact" id="modalFind">
+        <div class="modal-contents">
+            <span class="close" onclick="closeFind()">&times;</span>
+            <input type="text" id="searchInput" oninput="performSearch()" placeholder="Введите текст для поиска...">
+            <div id="searchResults"></div>
+        </div>
+    </div>
+
+
+
     <!-- модальное окно контактов -->
     <div class="modalContact" id="modalContact">
         <div class="modal-contents">
             <div class="block-1-2">
-                <div class="block1"></div>
-                <div class="block2"><span class="close" onclick="closeModal()">&times;</span></div>
+                <div class="block1">
+                    <div class="item-contact">
+                        <p style="color:rgb(209, 209, 209)">АДРЕС</p>
+                        <h1>МОСКВА</h1>
+                        <p>Хохловский переулок д. 11, стр. 3</p>
+                        <p class="end-elem">Адрес на карте  ↓</p>
+
+                    </div>
+                    <div  class="item-contact">
+                        <p style="color:rgb(209, 209, 209)">ТЕЛЕФОН</p>
+                        <h1 style="font-family: Floreste;">+7 (495) 621-26-17</h1>
+                        <p>Ответим на все вопросы</p>
+                        <ul class="end-elem">
+                            <li><i class="fab fa-telegram"></i></li>
+                            <li><i class="fab fa-twitter"></i></li>
+                            <li><i class="fab fa-linkedin"></i></li>
+                            <li><i class="fab fa-facebook"></i></li>
+                        </ul>
+                    </div>
+                
+                </div>
+                <div class="block2"><span class="close" onclick="closeModal()">&times;</span>
+                    <div class="item-contact">
+                        <p style="color:rgb(220, 220, 220)">ФОРМА ОБРАТНОЙ СВЯЗИ</p>
+                        <input type="email" placeholder="Email">
+                        <hr class="yellow">
+                        <input type="text" style="color: white" placeholder="Сообщение">
+                        <hr class="yellow">
+                        <button > Отправить</button>
+                    </div></div>
             </div>
             
             <div class="block3"></div>
@@ -75,21 +127,22 @@
         <script src="../js/modalContact.js"></script>
     </div>
 
-
+<!-- категории товаров -->
         <div class="category">
-            <h1>категории</h1>
+            <h1 style="text-align: center;">категории</h1>
             <div id="content-category" class="content-category"></div>
             <div id="content-details" class="content-details"></div>
             <script src="../js/category.js"></script>
     
         </div>
         
-
+<!-- линиии с контентом -->
         <div class="block-tet-content">
             <div class="creating-an-art-text first-text"><span style=" font-family: 'Floreste'; font-size:20px ;color:white;">creating a great art +  creating a great art +  creating a great art  + creating a great art  + creating a great art  + creating a great </span></div>   
             <div class="creating-an-art-text second-text"><span style=" font-family: 'Floreste';font-size:20px;color:white;">creating a great art + creating a great art + creating a great art +creating a great art + creating a great art  + creating a great</span></div> 
         </div>
            
+        <div class="blog"></div>
        
     </div>
 
