@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>furniture</title>
     <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/adaptiv.css">
+    <link rel="stylesheet" href="../css/adaptiv_desktop.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
    
 </head>
@@ -22,7 +22,7 @@
                     <li>Каталог</li>
                     <li>Блог</li>
                     <li id="modalFormContact">Контакты </li>
-                    <li id="openModal"><i class="fas fa-search"></i>Поиск</li>
+                    <li id="openModal"><i class="fas fa-search"></i><span class="mobile-hide-text">Поиск</span></li>
                     <li><i class="fas fa-heart"></i></li>
                     <li><i class="fas fa-user" id="modalForm"></i></li>
                     <li> <i class="fas fa-shopping-cart" id="shopping-cart"></i></i></li>
@@ -34,7 +34,7 @@
         <div id="cartModal" class="modal">
             <div class="modal-content">
                 <span class="closes">&times;</span>
-                <h2>Товары в избранном</h2>
+                <h2>Ваша корзина</h2>
                 
             </div>
         </div>
@@ -100,7 +100,7 @@
                     </div>
                     <div  class="item-contact">
                         <p style="color:rgb(209, 209, 209)">ТЕЛЕФОН</p>
-                        <h1 style="font-family: Floreste;">+7 (495) 621-26-17</h1>
+                        <h2 style="font-family: Floreste; flex-wrap: nowrap;">+7 (495) 621-26-17</h2>
                         <p>Ответим на все вопросы</p>
                         <ul class="end-elem">
                             <li><i class="fab fa-telegram"></i></li>
@@ -129,7 +129,7 @@
 
 <!-- категории товаров -->
         <div class="category">
-            <h1 style="text-align: center;">категории</h1>
+            <h1>категории</h1>
             <div id="content-category" class="content-category"></div>
             <div id="content-details" class="content-details"></div>
             <script src="../js/category.js"></script>
@@ -137,12 +137,10 @@
         </div>
         
 <!-- линиии с контентом -->
-        <div class="block-tet-content">
-            <div class="creating-an-art-text first-text"><span style=" font-family: 'Floreste'; font-size:20px ;color:white;">creating a great art +  creating a great art +  creating a great art  + creating a great art  + creating a great art  + creating a great </span></div>   
-            <div class="creating-an-art-text second-text"><span style=" font-family: 'Floreste';font-size:20px;color:white;">creating a great art + creating a great art + creating a great art +creating a great art + creating a great art  + creating a great</span></div> 
+        <div class="block-text-content">
+            <div class="creating-an-art-text first-text"><span style=" font-family: 'Floreste'; font-size:20px ;color:white;">great art +  creating a great art  + creating a great art  + creating a great art</span></div>   
+            <div class="creating-an-art-text second-text"><span style=" font-family: 'Floreste';font-size:20px;color:white;">great art + creating a great art +creating a great art + creating a great art  + creating a great</span></div> 
         </div>
-           
-        <div class="blog"></div>
        
     </div>
 
